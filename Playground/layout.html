@@ -23,6 +23,7 @@
 function q () {
      var qs = $('#ta').text(),q=JSON.parse(qs); 
     console.log(q);
+    $("#Question").html(q[0]['question']);
     //document.getElementById('Question').textContent = q[0]['question'];
 }
     
