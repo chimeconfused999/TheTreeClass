@@ -29,7 +29,7 @@
         }]
 </textarea>
 <button id="submit" onclick="
-    var q = $('#ta').text(); 
+    var qs = $('#ta').text(),q=JSON.parse(qs); 
     console.log(q);
     document.getElementById('Question').textContent = 'hi';
     ">Submit</button>
