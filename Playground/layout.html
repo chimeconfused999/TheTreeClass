@@ -28,11 +28,15 @@
             "explanation": "Since \(AB = AC\), the triangle is isosceles. Let \(AB = AC = x\). The height from \(A\) to \(BC\) bisects \(BC\), forming two right triangles with bases of \(3\). The area of the triangle is \(\\frac{1}{2} \times BC \times height = 9\sqrt{3}\), giving the height \(\\frac{18\sqrt{3}}{6} = 3\sqrt{3}\). Using the Pythagorean theorem, \(x^2 = (3\sqrt{3})^2 + 3^2\), so \(x = 6\)."
         }]
 </textarea>
-<button id="submit" onclick="
-    var qs = $('#ta').text(),q=JSON.parse(qs); 
+<script>
+function q () {
+     var qs = $('#ta').text(),q=JSON.parse(qs); 
     console.log(q);
-    document.getElementById('Question').textContent = q[0]['question'];
-    ">Submit</button>
+    //document.getElementById('Question').textContent = q[0]['question'];
+}
+    
+</script>
+<button id="submit" onclick="q();">Submit</button>
     
 </body>
 </html>
