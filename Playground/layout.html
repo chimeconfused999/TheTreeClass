@@ -43,6 +43,7 @@ function qa(cid) {
     str = str + q_choices(cid, q);
     $('.'+cid).html(str);
     //console.log(q);
+    //$('#radio2').prop('checked', true);
     MathJax.Hub.Queue(["Typeset",MathJax.Hub, "Questionsid"]);
 }
 function q_choices(cid, q) {
@@ -53,15 +54,20 @@ function q_choices(cid, q) {
       //qs1=qs.replace(/\\/g, "\\\\")
       //qs2=qs1.replace(/[\n\r\t]/g, '');
       //s=s+"<div class='Choices'>"+c[key]+"</div>";
-    var cb = '<input type="radio" name="questions"></input>'
+    var cb = '<input type="radio" name="questions" onclick="checked(this);"></input>'
     s = s + `<div class="Choice-${key}">${cb} ${qs} </div>`;
   }
   console.log(s);
   return s;
+  return cb;
+}
+function checked(element) {
+  console.log(element);
 }
 
 </script>
 <br /> <button id="submit" onclick="qa('Questions');">Submit</button>
+<button id="submit" onclick="submitAnswer(0);">Submit Answer</button>
 
 </body>
 </html>
